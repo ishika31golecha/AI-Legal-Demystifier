@@ -3,6 +3,7 @@ import NavBar from '../Components/NavBar'
 import plus from '../assets/plus.svg'
 import contract from '../assets/contract.svg'
 import {Link} from 'react-router-dom'
+import Footer from '../Components/Footer'
 
 const ComparativeAnalysis = () => {
   return (
@@ -68,9 +69,9 @@ const ComparativeAnalysis = () => {
         </div>
 
         {/* Contracts Comparison */}
-        <div className="flex gap-10 px-28 mt-12 flex-wrap text-black">
+        <div className="flex gap-10 px-28 mt-12 flex-wrap text-black ">
           {/* Contract A */}
-          <div className="bg-[#BABCDE] px-15 py-6 rounded-xl flex-1 ">
+          <div className="bg-[#BABCDE] px-15 py-6 rounded-xl flex-1 transform transition-all duration-300 hover:scale-105 hover:shadow-xl ">
             <h3 className="text-3xl font-semibold">Contract A</h3>
             <div className='flex justify-between'>
               <div className="w-30 h-30 bg-[#BABCDE] border-5 amber-50 rounded-full flex items-center justify-center text-4xl font-medium my-8 ">
@@ -87,14 +88,14 @@ const ComparativeAnalysis = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
-              <span className="bg-red-400 px-3 py-2 rounded-md text-md font-medium">Unclear payment terms</span>
-              <span className="bg-red-400 px-3 py-2 rounded-md text-md font-medium">Broad indemnity</span>
-              <span className="bg-red-400 px-3 py-2 rounded-md text-md font-medium">Consider lesser term</span>
+              <span className="bg-red-400 px-3 py-2 rounded-md text-md font-medium hover:bg-amber-900">Unclear payment terms</span>
+              <span className="bg-red-400 px-3 py-2 rounded-md text-md font-medium hover:bg-amber-900">Broad indemnity</span>
+              <span className="bg-red-400 px-3 py-2 rounded-md text-md font-medium hover:bg-amber-900">Consider lesser term</span>
             </div>
           </div>
 
           {/* Contract B */}
-          <div className="bg-[#BABCDE] px-15 py-6 rounded-xl flex-1 ">
+          <div className="bg-[#BABCDE] px-15 py-6 rounded-xl flex-1 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <h3 className="text-3xl font-semibold">Contract B</h3>
             <div className='flex justify-between'>
               <div className="w-30 h-30 bg-[#BABCDE] border-5 amber-50 rounded-full flex items-center justify-center text-4xl font-medium my-8 ">
@@ -111,13 +112,13 @@ const ComparativeAnalysis = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
-              <span className="bg-blue-400 px-3 py-2 rounded-md text-md font-medium">Unclear payment terms</span>
-              <span className="bg-blue-400 px-3 py-2 rounded-md text-md font-medium">Broad indemnity</span>
-              <span className="bg-blue-400 px-3 py-2 rounded-md text-md font-medium">Consider lesser term</span>
+              <span className="bg-blue-400 px-3 py-2 rounded-md text-md font-medium hover:bg-blue-600">Unclear payment terms</span>
+              <span className="bg-blue-400 px-3 py-2 rounded-md text-md font-medium hover:bg-blue-600">Broad indemnity</span>
+              <span className="bg-blue-400 px-3 py-2 rounded-md text-md font-medium hover:bg-blue-600">Consider lesser term</span>
             </div>
           </div>
         </div>
-
+        
         {/* Feedback */}
         <div className="px-16 mt-15 text-center flex gap-10">
           <p className="mb-3 text-3xl font-bold">Was this analysis helpful?</p>
@@ -125,37 +126,7 @@ const ComparativeAnalysis = () => {
             ★ ★ ★ ★ ☆
           </div>
         </div>
-
-        {/* Footer */}
-        <div className="px-16 py-10 mt-12 pb-10 border-t border-gray-700">
-          <div className="flex gap-20 text-sm flex-wrap">
-            <div>
-              <h4 className="font-semibold mb-2">Our Research</h4>
-              <ul className="space-y-1">
-                <li>Research Index</li>
-                <li>Research Overview</li>
-                <li>Research Residency</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">API Platform</h4>
-              <ul className="space-y-1">
-                <li>Platform Overview</li>
-                <li>Pricing</li>
-                <li>API log in (opens in a new window)</li>
-                <li>Documentation (opens in a new window)</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Safety</h4>
-              <ul className="space-y-1">
-                <li>Safety Approach</li>
-                <li>Security & Privacy</li>
-                <li>Trust & Transparency</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
     </>
   )
