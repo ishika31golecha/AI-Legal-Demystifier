@@ -37,6 +37,17 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showCases, setShowCases] = useState(false);
 
+  const categories = [
+  { name: "Property & Real Estate", slug: "Property_Real_Estate" },
+  { name: "Business & Corporate", slug: "business" },
+  { name: "Employment & HR", slug: "employment" },
+  { name: "Personal & Family", slug: "personal" },
+  { name: "Financial & Banking", slug: "financial" },
+  { name: "Government & Regulatory", slug: "government" },
+  { name: "Intellectual Property (IP)", slug: "ip" },
+  { name: "Civil & Criminal Legal Forms", slug: "civil" },
+];
+
   return (
     <>
       <div className='w-screen bg-[#0B0130]'>
@@ -210,20 +221,16 @@ const Home = () => {
 
         <div className="overflow-x-auto pb-4 scrollbar-hide">
           <div className="cursor-pointer flex space-x-4 min-w-max">
-            {[
-              "Lease Agreement",
-              "Non-Disclosure Agreement",
-              "Employment Contract",
-              "Service Agreement",
-              "Partnership Agreement",
-              "Privacy Policy"
-            ].map((doc, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-purple-200 to-blue-100 rounded-lg p-4 text-center min-w-[200px] transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+
+            {categories.map((category) => (
+              <Link
+                key={category.slug}
+                to={`/templates/${category.slug}`} // navigate to category page
               >
-                <h4 className="text-gray-800 font-semibold mb-2">{doc}</h4>
-              </div>
+                <div className="bg-gradient-to-br from-purple-200 to-blue-100 rounded-lg p-4 text-center min-w-[200px] transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <h4 className="text-gray-800 font-semibold mb-2">{category.name}</h4>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
